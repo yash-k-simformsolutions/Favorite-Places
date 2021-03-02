@@ -1,0 +1,39 @@
+.favorite{
+    border: 1px solid indigo;
+    width: 18vw;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.favorite input{
+    height: 20px;
+    font-size: 18px;
+    outline: none;
+}
+
+.favorite button{
+    width: 184px;
+    margin: 10px 0;
+}
+
+.favorite_LocationList{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 18vw;
+}
+
+.favorite_Location{
+    border: 1px solid chocolate;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.favorite_LocationButtons > *{
+    font-size: 22px;
+    margin: 0 10px;
+}

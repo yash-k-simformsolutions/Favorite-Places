@@ -1,0 +1,25 @@
+.header{
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header_Search{
+    border: 2px solid indigo;
+    width: 20%;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.header_Search input{
+    width: 90%;
+    border: none;
+    font-size: 18px;
+    border-radius: 15px;
+    outline: none;
+}
+
+.anticon-search{
+    font-size: 18px;
+}
