@@ -13,7 +13,10 @@ const postData = async () => {
   const urlPost = "https://outpost.mapmyindia.com/api/security/oauth/token";
   
   try{
-    const response = await axios.post(urlPost, null, { params: { grant_type, client_id, client_secret } } );
+    const response = await axios.post(urlPost, null, { 
+      // headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000/' }, 
+      params: { grant_type, client_id, client_secret },
+    } );
     access_token = response.data.access_token;
     console.log(access_token);
   } catch (error){
@@ -34,7 +37,12 @@ class App extends Component {
   getData = async () => {
     const urlGet = "https://atlas.mapmyindia.com/api/places/search/json?query=bunkers";
     try{  
-      const getResponse = await axios.get(urlGet, { headers: { 'Authorization': access_token } });
+      const getResponse = await axios.get(urlGet, { 
+        headers: { 
+          'Authorization': access_token,
+          // 'Access-Control-Allow-Origin': 'http://localhost:3000/', 
+        } 
+      });
       const getResponseData = await getResponse.data;
       console.log(getResponseData);
       
